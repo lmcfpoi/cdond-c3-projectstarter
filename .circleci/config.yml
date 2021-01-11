@@ -1,3 +1,4 @@
+---
 version: 2.1
 
 commands:
@@ -71,39 +72,39 @@ jobs:
 
   test-frontend:
     docker:
-      # Docker image here
+    # Docker image here
     steps:
-      # Checkout code from git
-      # Restore from cache
-      # Your job code here
+    # Checkout code from git
+    # Restore from cache
+    # Your job code here
 
   test-backend:
     docker:
-      # Docker image here
+    # Docker image here
     steps:
-      # Checkout code from git
-      # Restore from cache
-      # Your job code here
+    # Checkout code from git
+    # Restore from cache
+    # Your job code here
 
   scan-frontend:
     docker:
-      # Docker image here
+    # Docker image here
     steps:
-      # Checkout code from git
-      # Restore from cache
-      # Your job code here
+    # Checkout code from git
+    # Restore from cache
+    # Your job code here
 
   scan-backend:
     docker:
-      # Docker image here
+    # Docker image here
     steps:
-      # Checkout code from git
-      # Restore from cache
-      # Your job code here
+    # Checkout code from git
+    # Restore from cache
+    # Your job code here
 
   deploy-infrastructure:
     docker:
-      # Docker image here that supports AWS CLI
+    # Docker image here that supports AWS CLI
     steps:
       # Checkout code from git
       - run:
@@ -133,11 +134,11 @@ jobs:
           root: ~/
           paths:
             - project/.circleci/ansible/inventory.txt
-      # Here's where you will add some code to rollback on failure
+            # Here's where you will add some code to rollback on failure
 
   configure-infrastructure:
     docker:
-      # Docker image here that supports Ansible
+    # Docker image here that supports Ansible
     steps:
       # Checkout code from git
       # Add ssh keys with fingerprint
@@ -156,7 +157,7 @@ jobs:
 
   run-migrations:
     docker:
-      # Docker image here that supports NodeJS
+    # Docker image here that supports NodeJS
     steps:
       # Checkout code from git
       - run:
@@ -173,7 +174,7 @@ jobs:
 
   deploy-frontend:
     docker:
-      # Docker image here that supports AWS CLI
+    # Docker image here that supports AWS CLI
     steps:
       # Checkout code from git
       - run:
@@ -194,7 +195,7 @@ jobs:
 
   deploy-backend:
     docker:
-      # Docker image here that supports Ansible
+    # Docker image here that supports Ansible
     steps:
       # Checkout code from git
       # Add ssh keys with fingerprint
@@ -211,7 +212,7 @@ jobs:
 
   smoke-test:
     docker:
-      # Lightweight Docker image
+    # Lightweight Docker image
     steps:
       # Checkout code from git
       - run:
@@ -234,7 +235,7 @@ jobs:
 
   cloudfront-update:
     docker:
-      # Docker image here that supports AWS CLI
+    # Docker image here that supports AWS CLI
     steps:
       # Checkout code from git
       - run:
@@ -249,7 +250,7 @@ jobs:
 
 cleanup:
   docker:
-      # Docker image here
+    # Docker image here
     steps:
       # Checkout code from git
       - run:
